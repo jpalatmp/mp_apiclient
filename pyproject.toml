@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "azcstesting"
+version = "0.1.0"
+description = ""
+authors = ["Jay Palat <jay@mpathic.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
