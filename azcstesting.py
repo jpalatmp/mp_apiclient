@@ -14,7 +14,7 @@ def fetch_url_with_data(url, custom_headers, data):
         print("Error:", e)
         return None
 
-def extract_classification(json_response):
+def extract_azcs_classification(json_response):
     if "text_classifications" in json_response:
         for classification in json_response["text_classifications"]:
             if "model_classifications" in classification:
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 }
                 json_response = fetch_url_with_data(url, headers, data)
                 if json_response:
-                    classification = extract_classification(json_response)
+                    classification = extract_azcs_classification(json_response)
                     write_classification_to_csv(classification, input_text, output_file)
                 else:
                     print("Failed to fetch URL or extract classification.")
