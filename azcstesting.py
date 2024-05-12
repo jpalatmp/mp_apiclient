@@ -37,13 +37,7 @@ def write_classification_to_csv(classification, input_text, output_file):
                         details.get("prediction", ""),
                         details.get("severity", ""),
                     ])
-                else:
-                    writer.writerow([
-                        input_text,
-                        "NO CLASSIFICATION FOUND",
-                        "",
-                        ""
-                    ])
+
         print(f"Classification appended to CSV: {output_file}")
     else:
         print("No classification found for 'azcs' model.")
