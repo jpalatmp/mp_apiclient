@@ -1,3 +1,4 @@
 *.csv
 *.xlsx
 coredata/
+.DS_Store
